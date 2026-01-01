@@ -30,8 +30,12 @@
     </div>
 
     <div id="letter-overlay" class="letter-overlay" onclick="closeLetter()">
-        <div class="letter-content">
-            <img src="Letter.jpg" alt="New Year Letter">
+        <div class="letter-content" onclick="event.stopPropagation()">
+            <img id="main-letter" src="Letter.jpg" alt="New Year Letter">
+            <img id="main-photo" src="img.jpg" alt="Photo" class="hidden-photo">
+            <div id="next-btn" class="next-btn" onclick="showPhoto()">
+                <span>&#10148;</span>
+            </div>
         </div>
     </div>
 
@@ -39,8 +43,22 @@
         function openLetter() {
             document.getElementById('letter-overlay').classList.add('active');
         }
+
+        function showPhoto() {
+            document.getElementById('main-letter').classList.add('fade-out');
+            document.getElementById('main-photo').classList.add('show');
+            document.getElementById('next-btn').style.display = 'none';
+        }
+
         function closeLetter() {
             document.getElementById('letter-overlay').classList.remove('active');
+            
+            // Reset state after transition finishes
+            setTimeout(() => {
+                document.getElementById('main-letter').classList.remove('fade-out');
+                document.getElementById('main-photo').classList.remove('show');
+                document.getElementById('next-btn').style.display = 'flex';
+            }, 500);
         }
     </script>
 </body>

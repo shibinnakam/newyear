@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Post Cover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="envelope-container">
+        <div class="envelope">
+            <div class="airmail-sticker">
+                <div class="plane-icon"></div>
+            </div>
+            <div class="stamp">
+                <div class="flower"></div>
+            </div>
+            <div class="postmark">
+                <div class="waves"></div>
+                <div class="circle">LOCAL POST</div>
+            </div>
+            <div class="address">
+                <p>TO: Ansu Maria Benny</p>
+                <p>Puthuppallil Kadaplamattom</p>
+            </div>
+            <div class="tap-here" onclick="openLetter()">
+                <span>TAP HERE</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="letter-overlay" class="letter-overlay" onclick="closeLetter()">
+        <div class="letter-content">
+            <img src="Letter.jpg" alt="New Year Letter">
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById('letter-overlay').classList.add('active');
+        }
+        function closeLetter() {
+            document.getElementById('letter-overlay').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

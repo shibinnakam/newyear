@@ -268,8 +268,105 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    .envelope {
+        width: 90vw;
+        height: 60vw;
+        max-height: 70vh;
+        border-width: 6px;
+        transform: rotate(-2deg);
+    }
+
+    .airmail-sticker {
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 50px;
+    }
+
+    .plane-icon {
+        width: 50px;
+        height: 25px;
+    }
+
+    .stamp {
+        top: 10px;
+        right: 10px;
+        width: 60px;
+        height: 80px;
+    }
+
+    .postmark {
+        top: 50px;
+        right: 60px;
+    }
+
+    .waves {
+        width: 100px;
+        height: 40px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        font-size: 8px;
+        bottom: -25px;
+        right: -10px;
+    }
+
+    .address {
+        bottom: 40px;
+        left: 40px;
+        font-size: 16px;
+    }
+
+    .tap-here {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
     .next-btn {
         right: 10px;
-        background: rgba(0, 0, 0, 0.5);
+        bottom: 20px;
+        top: auto;
+        transform: none;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .next-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .letter-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    .letter-content img {
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .address {
+        font-size: 12px;
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .airmail-sticker {
+        width: 80px;
+        height: 40px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .plane-icon {
+        width: 40px;
+        height: 20px;
+    }
+
+    .stamp {
+        width: 50px;
+        height: 70px;
     }
 }
